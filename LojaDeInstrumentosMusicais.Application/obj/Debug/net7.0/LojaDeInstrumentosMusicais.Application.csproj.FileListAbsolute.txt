@@ -1,0 +1,15 @@
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\bin\Debug\net7.0\LojaDeInstrumentosMusicais.Application.deps.json
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\bin\Debug\net7.0\LojaDeInstrumentosMusicais.Application.dll
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\bin\Debug\net7.0\LojaDeInstrumentosMusicais.Application.pdb
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.csproj.AssemblyReference.cache
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.AssemblyInfoInputs.cache
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.AssemblyInfo.cs
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.csproj.CoreCompileInputs.cache
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.dll
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\refint\LojaDeInstrumentosMusicais.Application.dll
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.pdb
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\ref\LojaDeInstrumentosMusicais.Application.dll
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\bin\Debug\net7.0\LojaDeInstrumentosMusicais.Domain.dll
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\bin\Debug\net7.0\LojaDeInstrumentosMusicais.Domain.pdb
+C:\Users\notec\OneDrive\Área de Trabalho\LojaDeInstrumentosMusicais\LojaDeInstrumentosMusicais.Application\obj\Debug\net7.0\LojaDeInstrumentosMusicais.Application.csproj.CopyComplete

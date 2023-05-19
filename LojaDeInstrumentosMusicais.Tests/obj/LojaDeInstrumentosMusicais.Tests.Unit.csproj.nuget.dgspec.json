@@ -1,0 +1,402 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Tests\\LojaDeInstrumentosMusicais.Tests.Unit.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\LojaDeInstrumentosMusicais.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\LojaDeInstrumentosMusicais.API.csproj",
+        "projectName": "LojaDeInstrumentosMusicais.API",
+        "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\LojaDeInstrumentosMusicais.API.csproj",
+        "packagesPath": "C:\\Users\\notec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\notec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\LojaDeInstrumentosMusicais.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\LojaDeInstrumentosMusicais.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj",
+        "projectName": "LojaDeInstrumentosMusicais.Application",
+        "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj",
+        "packagesPath": "C:\\Users\\notec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\notec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj",
+        "projectName": "LojaDeInstrumentosMusicais.Domain",
+        "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj",
+        "packagesPath": "C:\\Users\\notec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\notec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\LojaDeInstrumentosMusicais.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\LojaDeInstrumentosMusicais.Infrastructure.csproj",
+        "projectName": "LojaDeInstrumentosMusicais.Infrastructure",
+        "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\LojaDeInstrumentosMusicais.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\notec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\notec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj"
+              },
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Domain\\LojaDeInstrumentosMusicais.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Tests\\LojaDeInstrumentosMusicais.Tests.Unit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Tests\\LojaDeInstrumentosMusicais.Tests.Unit.csproj",
+        "projectName": "LojaDeInstrumentosMusicais.Tests.Unit",
+        "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Tests\\LojaDeInstrumentosMusicais.Tests.Unit.csproj",
+        "packagesPath": "C:\\Users\\notec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\notec\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\LojaDeInstrumentosMusicais.API.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.API\\LojaDeInstrumentosMusicais.API.csproj"
+              },
+              "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj": {
+                "projectPath": "C:\\Users\\notec\\OneDrive\\Área de Trabalho\\LojaDeInstrumentosMusicais\\LojaDeInstrumentosMusicais.Application\\LojaDeInstrumentosMusicais.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.18.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "Shouldly": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

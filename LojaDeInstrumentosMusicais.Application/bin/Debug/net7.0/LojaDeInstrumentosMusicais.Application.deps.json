@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LojaDeInstrumentosMusicais.Application/1.0.0": {
+        "dependencies": {
+          "LojaDeInstrumentosMusicais.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LojaDeInstrumentosMusicais.Application.dll": {}
+        }
+      },
+      "LojaDeInstrumentosMusicais.Domain/1.0.0": {
+        "runtime": {
+          "LojaDeInstrumentosMusicais.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LojaDeInstrumentosMusicais.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LojaDeInstrumentosMusicais.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
