@@ -4,36 +4,30 @@ using LojaDeInstrumentosMusicais.Application.DTOs;
 using LojaDeInstrumentosMusicais.Application.Interfaces;
 using LojaDeInstrumentosMusicais.Domain.Models;
 using LojaDeInstrumentosMusicais.Tests.Unit.Utils;
-using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
 {
     public class VendaAdapterTests
     {
+        private readonly VendaAdapter _adapter;
         private readonly Fixture _fixture;
-        private readonly Mock<IVendaAdapter> _vendaAdapterMock;
         private readonly Mock<IInstrumentoMusicalAdapter> _instrumentoMusicalAdapterMock;
         private readonly Mock<IVendedorAdapter> _vendedorAdapterMock;
         public VendaAdapterTests()
         {
             _fixture = new Fixture();
             _fixture.OmitirComportamentoRecursivo();
-            _vendaAdapterMock = new Mock<IVendaAdapter>();
             _instrumentoMusicalAdapterMock = new Mock<IInstrumentoMusicalAdapter>();
             _vendedorAdapterMock = new Mock<IVendedorAdapter>();
+            _adapter = new VendaAdapter(_vendedorAdapterMock.Object, _instrumentoMusicalAdapterMock.Object);
         }
 
         [Fact]
         public void ToVendaModelAdapter_Test_AdaptacaoCorreta()
         {
+            //Arrange
             var vendedorRequest = _fixture.Create<VendedorRequestDTO>();
             var vendedorModel = new VendedorModel()
             {
@@ -64,11 +58,10 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
             _vendedorAdapterMock.Setup(x => x.ToVendedorModel(vendedorRequest)).Returns(vendedorModel);
             _instrumentoMusicalAdapterMock.Setup(x => x.ToInstrumentoMusicalModel(instrumentoMusicalRequest))
                 .Returns(instrumentoMusicalModel);
+            //Act
+            var toVendaModel = _adapter.ToVendaModel(vendaRequest);
 
-            var adapter = new VendaAdapter(_vendedorAdapterMock.Object, _instrumentoMusicalAdapterMock.Object);
-            var toVendaModel = adapter.ToVendaModel(vendaRequest);
             // Assert
-
             Assert.Equal(vendedorModel, toVendaModel.Vendedor);
             Assert.Equal(instrumentoMusicalModel, toVendaModel.Instrumentos);
         }
@@ -76,22 +69,25 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
         [Fact]
         public void ToVendaModelUpdateAdapter_Test_AdaptacaoCorreta()
         {
+            //Arrange
             var vendaRequestUpdate = _fixture.Create<VendaRequestUpdateDTO>();
             var vendaModel = new VendaModel()
-            {
+            {                
                 DataDeAlteracao = vendaRequestUpdate.DataDeAlteracao,
                 StatusDaVenda = vendaRequestUpdate.StatusDaVenda
             };
 
-            var vendaAdapter = new VendaAdapter(_vendedorAdapterMock.Object, _instrumentoMusicalAdapterMock.Object);
-            vendaAdapter.ToVendaModelUpdate(vendaRequestUpdate);
+            //Act
+            var retorno = _adapter.ToVendaModelUpdate(vendaRequestUpdate);
 
-            Assert.Equal(vendaModel.DataDeAlteracao, vendaRequestUpdate.DataDeAlteracao);
-            Assert.Equal(vendaModel.StatusDaVenda, vendaRequestUpdate.StatusDaVenda);
+            //Assert
+            vendaModel.DataDeAlteracao.ShouldBe(retorno.DataDeAlteracao);
+            vendaModel.StatusDaVenda.ShouldBe(retorno.StatusDaVenda);
         }
         [Fact]
         public void ToVendaResponse_Test_AdaptacaoCorreta()
         {
+            //Arrange
             var vendedorModel = _fixture.Create<VendedorModel>();
             var vendedorResponse = new VendedorResponseDTO()
             {
@@ -136,23 +132,19 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
                 Vendedor = vendedorResponse,
                 Instrumentos = instrumentoMusicalResponse
             };
-            var adapter = new VendaAdapter(_vendedorAdapterMock.Object, _instrumentoMusicalAdapterMock.Object);
-
+            
             _instrumentoMusicalAdapterMock.Setup(ima => ima.ToInstrumentoMusicalResponse(instrumentoMusicalModel))
                 .Returns(instrumentoMusicalResponse);
             _vendedorAdapterMock.Setup(vam => vam.ToVendedorResponseDTO(vendedorModel))
                 .Returns(vendedorResponse);
-            var retorno = adapter.ToVendaResponse(vendaModel);
+
+            //Act
+            var retorno = _adapter.ToVendaResponse(vendaModel);
 
             // Assert
-
-            Assert.Equal(vendaResponse.Id, retorno.Id);
-            Assert.Equal(vendaResponse.IdPedido, retorno.IdPedido);
-            Assert.Equal(vendaResponse.IdVendedor, retorno.IdVendedor);
-            Assert.Equal(vendaResponse.DataDaVenda, retorno.DataDaVenda);
-            Assert.Equal(vendaResponse.StatusDaVenda, retorno.StatusDaVenda);
-            Assert.Equal(vendedorResponse, retorno.Vendedor);
-            Assert.Equal(instrumentoMusicalResponse, retorno.Instrumentos);
+            vendaResponse.ShouldBeEquivalentTo(retorno);
+            vendedorResponse.ShouldBe(retorno.Vendedor);
+            instrumentoMusicalResponse.ShouldBe(retorno.Instrumentos);
         }
 
     }

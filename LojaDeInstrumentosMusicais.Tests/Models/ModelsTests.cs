@@ -1,11 +1,6 @@
 ﻿using AutoFixture;
 using LojaDeInstrumentosMusicais.Domain.Models;
 using LojaDeInstrumentosMusicais.Tests.Unit.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaDeInstrumentosMusicais.Tests.Unit.Models
 {

@@ -7,12 +7,6 @@ using LojaDeInstrumentosMusicais.Domain.Models;
 using LojaDeInstrumentosMusicais.Tests.Unit.Utils;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaDeInstrumentosMusicais.Tests.Unit.Services
 {
@@ -21,6 +15,7 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Services
         private readonly Fixture _fixture;
         private readonly Mock<IVendaRepository> _vendaRepositoryMock;
         private readonly Mock<IVendaAdapter> _vendaAdapterMock;
+        
         public VendaServiceTests()
         {
             _fixture = new Fixture();

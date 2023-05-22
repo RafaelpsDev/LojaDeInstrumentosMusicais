@@ -5,25 +5,18 @@ using LojaDeInstrumentosMusicais.Application.Interfaces;
 using LojaDeInstrumentosMusicais.Domain.Models;
 using LojaDeInstrumentosMusicais.Tests.Unit.Utils;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
 {
     public class InstrumentoMusicalAdapterTests
     {
-        private readonly Fixture _fixture;        
-        private readonly Mock<IInstrumentoMusicalAdapter> _adapterMock;
+        private readonly Fixture _fixture;
+        private readonly InstrumentoMusicalAdapter _adapter;
         public InstrumentoMusicalAdapterTests()
         {
             _fixture = new Fixture();
             _fixture.OmitirComportamentoRecursivo();
-            _adapterMock = new Mock<IInstrumentoMusicalAdapter>();
-            
+            _adapter = new InstrumentoMusicalAdapter();
         }
 
         [Fact]
@@ -43,9 +36,8 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
 
                 instrumentoMusicalModel.Add(model);
             }
-            var adapter = new InstrumentoMusicalAdapter();
             //Act
-            var retorno = adapter.ToInstrumentoMusicalModel(instrumentoMusicalRequest);
+            var retorno = _adapter.ToInstrumentoMusicalModel(instrumentoMusicalRequest);
             var retornoList = new List<InstrumentoMusicalModel>(retorno);
             // Assert
             Assert.NotNull(retorno);
@@ -76,11 +68,10 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
                     Valor = model.Valor
                 };
                 instrumentoMusicalResponse.Add(response);
-            }
-            var adapter = new InstrumentoMusicalAdapter();
+            }            
 
             //Act
-            var retorno = adapter.ToInstrumentoMusicalResponse(instrumentoMusicalModel);
+            var retorno = _adapter.ToInstrumentoMusicalResponse(instrumentoMusicalModel);
             var retornoList = new List<InstrumentoMusicalResponseDTO>(retorno);
 
                        

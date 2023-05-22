@@ -6,26 +6,20 @@ using LojaDeInstrumentosMusicais.Domain.Models;
 using LojaDeInstrumentosMusicais.Tests.Unit.Utils;
 using Moq;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
 {
     public class VendedorAdaptersTests
     {
         private readonly Fixture _fixture;
-        private readonly Mock<IVendedorAdapter> _vendedorAdapterMock;
-        private readonly Mock<IVendaAdapter> _vendaAdapterMock;
-        private readonly Mock<IInstrumentoMusicalAdapter> _instrumentoMusicalAdapterMock;
+        private readonly VendedorAdapter _adapter;
 
         public VendedorAdaptersTests()
         {
+
             _fixture = new Fixture();
             _fixture.OmitirComportamentoRecursivo();
-            _vendedorAdapterMock = new Mock<IVendedorAdapter>();
+            _adapter = new VendedorAdapter();
         }
 
         [Fact]
@@ -34,20 +28,16 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
             var vendedorModel = _fixture.Create<VendedorModel>();
             var vendedorResponse = new VendedorResponseDTO
             {
+                Id = vendedorModel.Id,
                 Nome = vendedorModel.Nome,
                 Cpf = vendedorModel.Cpf,
                 Email = vendedorModel.Email,
                 Telefone = vendedorModel.Telefone
             };
-            var adapter = new VendedorAdapter();
-
-
-            var resultado = adapter.ToVendedorResponseDTO(vendedorModel);
-
-            resultado.Nome.ShouldBe(vendedorResponse.Nome);
-            resultado.Cpf.ShouldBe(vendedorResponse.Cpf);
-            resultado.Email.ShouldBe(vendedorResponse.Email);
-            resultado.Telefone.ShouldBe(vendedorResponse.Telefone);
+            
+            var retorno = _adapter.ToVendedorResponseDTO(vendedorModel);
+            
+            retorno.ShouldBeEquivalentTo(vendedorResponse);
         }
         [Fact]
         public void ToVendedorModel_Test_AdaptacaoCorreta()
@@ -61,13 +51,9 @@ namespace LojaDeInstrumentosMusicais.Tests.Unit.Adapters
                 Telefone = vendedorRequest.Telefone
             };
 
-            var adapter = new VendedorAdapter();
-            var retorno = adapter.ToVendedorModel(vendedorRequest);
+            var retorno = _adapter.ToVendedorModel(vendedorRequest);
 
-            retorno.Nome.ShouldBe(vendedorModel.Nome);
-            retorno.Cpf.ShouldBe(vendedorModel.Cpf);
-            retorno.Email.ShouldBe(vendedorModel.Email);
-            retorno.Telefone.ShouldBe(vendedorRequest.Telefone);
+            retorno.ShouldBeEquivalentTo(vendedorModel);
         }
     }
 }
